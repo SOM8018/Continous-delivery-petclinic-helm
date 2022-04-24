@@ -9,7 +9,7 @@ pipeline{
                 sh 'cp -R Helm/* .'
                 sh 'ls -ltr'
                 sh 'pwd'
-                sh '/usr/local/bin/helm upgrade --install petclinic-app petclinic --set image.repository=registry.hub.docker.com/soamibm/petclinic --set image.tag=latest'
+                sh '/usr/local/bin/helm upgrade --install petclinic petclinic --set image.repository=registry.hub.docker.com/soamibm/petclinic --set image.tag=latest'
             }
             post{
                 always{
