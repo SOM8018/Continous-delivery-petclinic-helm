@@ -7,7 +7,7 @@ pipeline{
                 echo "========executing Build on K8========"
                 sh 'pwd'
                 sh 'cp -R Helm/* .'
-                sh 'ls ltr'
+                sh 'ls -ltr'
                 sh 'pwd'
                 sh '/usr/local/bin/helm upgarde --install petclinic-app petclinic --set image.repository=registry.hub.docker.com/soamibm/petclinic --set image.tag=latest'
             }
