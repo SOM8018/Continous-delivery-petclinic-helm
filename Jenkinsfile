@@ -9,7 +9,7 @@ pipeline{
                 sh 'cp -R Helm/* .'
                 sh 'ls -ltr'
                 sh 'pwd'
-                sh '/usr/local/bin/helm --install petclinic-app petclinic deployment --set image.repository=registry-1.docker.io/soamibm/petclinic --set image.tag=24'
+                sh '/usr/local/bin/helm --install petclinic deployment --set image.repository=registry-1.docker.io/soamibm/petclinic --set image.tag=24'
             }
             post{
                 always{
